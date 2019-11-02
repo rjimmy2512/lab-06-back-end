@@ -1,15 +1,23 @@
 {
-  "name": "demo",
+  "name": "lab-06",
   "version": "1.0.0",
-  "description": "Today we will take a step into the back end, beginning to write a proper `server.js` file to serve API data to the City Explorer client application. You will continue to build out this file through lab 9, working with a new partner each day.",
+  "description": "[Node JS Docs](https://nodejs.org/en/)",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iptmh/lab-06.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iptmh/lab-06/issues"
+  },
+  "homepage": "https://github.com/iptmh/lab-06#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",

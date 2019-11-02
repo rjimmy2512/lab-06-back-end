@@ -9,7 +9,7 @@ const cors = require('cors');
 
 //Application Setup
 const PORT = process.env.PORT;
-const app  = express();
+const app = express();
 app.use(cors());
 
 //route syntax = app.<operation>('<route>', callback );
@@ -34,21 +34,35 @@ function aboutUsHandler(request, response) {
 
 //API routes
 app.get('/location', (request, response) => {
-    try{
+    try {
         const geoData = require('./data/geo.json');
         const city = request.query.data;
         const locationData = new Location(city, geoData);
-        console.log('locationData ',locationData);
+        console.log('locationData ', locationData);
         response.send(locationData);
     }
-    catch(error){
+    catch (error) {
+        //some function or error message
+        errorHandler('So sorry, something went wrong', request, response);
+    }
+})
+
+app.get('/weather', (request, response) => {
+    try {
+        const geoData = require('./data/darksky.json').daily.data;
+        const city = request.query.data;
+        const locationData = new Location(city, geoData);
+        console.log('locationData ', locationData);
+        response.send(locationData);
+    }
+    catch (error) {
         //some function or error message
         errorHandler('So sorry, something went wrong', request, response);
     }
 })
 
 //Helper Funcitons
-function Location(city, geoData){
+function Location(city, geoData) {
     this.search_query = city;
     this.formatted_query = geoData.results[0].formatted_address;
     this.latitude = geoData.results[0].geometry.location.lat;
