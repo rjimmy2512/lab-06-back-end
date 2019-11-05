@@ -26,13 +26,11 @@ app.get('/bad', (request, response) => {
 });
 
 //the callback can be a separate function. Really makes readable.
-app.get('/about', aboutUsHandler);
 
+app.get('/about', aboutUsHandler);
 function aboutUsHandler(request, response) {
   response.status(200).send('This is the About Us page .html');
 }
-
-;
 
 //API routes
 app.get('/location', (request, response) => {
@@ -49,10 +47,10 @@ app.get('/location', (request, response) => {
   }
 });
 
-app.get('*', (request, response) => {
-  response.status(404).send('This route does not exist, Try another one');
-  response.send();
-})
+// app.get('*', (request, response) => {
+//   response.status(404).send('This route does not exist, Try another one');
+//   response.send();
+// })
 
 app.get('/weather', (request, response) => {
   try {
