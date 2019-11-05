@@ -73,8 +73,6 @@ function errorHandler(error, request, response) {
     response.status(500).send(error);
 }
 
-
-
 //Ensure the server is listening for requests
 // THIS MUST BE AT THE BOTTOM OF THE FILE!!!!
 app.listen(PORT, () => console.log(`The server is up, listening on ${PORT}`));
