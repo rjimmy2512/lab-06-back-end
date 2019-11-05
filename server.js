@@ -18,7 +18,7 @@ app.use(express.json('public'));
 
 //route syntax = app.<operation>('<route>', callback );
 app.get('/', (request, response) => {
-  response.send(http://127.0.0.1:64067/front-end/index.html);
+  response.send('http://127.0.0.1:64067/front-end/index.html');
 });
 
 app.get('/bad', (request, response) => {
