@@ -1,7 +1,7 @@
 {
   "name": "lab-06",
   "version": "1.0.0",
-  "description": "[Node JS Docs](https://nodejs.org/en/)",
+  "description": "http://127.0.0.1:64067/front-end/index.html",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -15,4 +15,5 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1"
   }
+
 }

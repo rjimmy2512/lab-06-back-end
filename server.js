@@ -12,13 +12,9 @@ const PORT = process.env.PORT;
 const app = express();
 app.use(cors());
 
-app.use(express.json());
-app.use(express.json('public'));
-
-
 //route syntax = app.<operation>('<route>', callback );
 app.get('/', (request, response) => {
-  response.send('http://127.0.0.1:64067/front-end/index.html');
+  response.send('Homepage');
 });
 
 app.get('/bad', (request, response) => {
