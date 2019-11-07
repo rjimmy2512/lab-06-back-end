@@ -14,8 +14,8 @@ app.use(cors());
 
 //route syntax = app.<operation>('<route>', callback );
 app.get('/', (request, response) => {
-    response.send('Home Page!');
-})
+  response.send('Homepage');
+});
 
 //the callback can be a separate function. Really makes readable.
 //API routes
@@ -72,6 +72,9 @@ function errorHandler(error, request, response) {
     response.status(500).send(error);
 }
 
+function errorHandler(error, request, response) {
+  response.status(500).send(error);
+}
 
 //Ensure the server is listening for requests
 // THIS MUST BE AT THE BOTTOM OF THE FILE!!!!
